@@ -1,0 +1,37 @@
+import colored, random
+
+def show_board(board):
+    """Show board.
+
+    Parameters
+    ----------
+    board: game state (dict)
+
+    """
+
+    board_str = '🌴' * (2 * board['nb_cols'] + 2) + '\n'
+
+    for row in range(board['nb_rows']):
+        board_str += '🌴'
+
+        for col in range(board['nb_cols']):
+            board_str += colored.bg(random.randint(17, 45))
+            board_str += colored.fg(random.randint(208, 229))
+            if (row, col) in board['hubs']:
+                if board['hubs'][(row, col)] == 'hubs1':
+                    board_str += '🏝'
+                elif board['hubs'][(row, col)] == 'hubs2':
+                    board_str += '🏝'
+            else:
+                board_str += '~'
+                board_str += colored.attr('reset')
+
+        board_str += '🌴\n'
+
+    board_str += '🌴' * (2 * board['nb_cols'] + 2)
+
+    return board_str
+
+board = {'nb_rows':10, 'nb_cols':20, 'hubs':{(5, 5):'hubs1', (9, 6):'hubs2'}}
+
+print(show_board(board))
