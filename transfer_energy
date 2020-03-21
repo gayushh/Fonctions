@@ -1,0 +1,38 @@
+Def energy_tranfer (source of energy, destination of energy) : 
+
+‘’ ‘’ ‘’ 
+
+This function asks the tankers to take or give energy to the players
+
+Parameters
+
+_______
+
+Source of energy : where energy is taken (ravit)
+Source of destination : where the energy is deposited (player) 
+
+
+Returns 
+
+_______ 
+
+info_player_x : dictionary that contains informations about the player who just moved a new unit (str) 
+
+Version 
+
+________
+
+Spécification : Gayane Harutyunyan ( v.1 22/02/2020)
+
+Def energy_transfer (source of energy, destination of energy) 
+
+
+
+
+
+
+
+
+
+
+
