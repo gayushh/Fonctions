@@ -1,0 +1,45 @@
+Def is_range_enough (unit attack, unit target, coordinates) :
+"""
+
+Check if it is possible to reach an other unit, if the range is enough. 
+
+
+Parameters
+
+________
+unit_attack : name of the unit who want to attack (str) 
+unit_target : name of the unit who is attacked (str)
+coordinates : coordinates of the unit_target 
+
+
+Returns 
+
+________
+True : the range is enough 
+False : the range is not enough 
+
+
+Version 
+
+_______ 
+Spécification : Marie Heneffe (v.1 24/02/2020) 
+
+
+""" 
+
+
+Def is_range_enough (unit attack,unit target, coordinates) : 
+
+coordinates = [r2-r1 + c2-c1]
+
+
+#si la fonction renvoie true, alors le coup peut se réaliser sinon non 
+
+res=False 
+if r2-r1 + c2-c1 <= 1 
+     res=True 
+     #si porté inférieur ou égal à 1, le coup peut se réalisé 
+return res 
+
+
+Implémentation : Harutyunyan Gayane (v.1 22/03/2020) 
