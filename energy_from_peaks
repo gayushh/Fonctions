@@ -1,0 +1,77 @@
+def energy_from_peaks (tanker,peak):
+    """   take energy from the peaks.
+    Parameters
+    ----------
+    tanker: name of tanker (str)
+    peak: number of the peak (int)
+    
+    returns
+    ---------
+    info_player_x : dictionary that contains informations about the player who just moved a new unit (str) 
+    Error: it's full 
+    info_map : dictionnary that contains info about the map
+    
+    Version
+    -------
+    
+    Spécification : Gayane Harutyunyan ( v.3 26/03/2020)
+    Implémentation : Gayane Harutyunyan (v.4 27/03/2020)
+    """
+
+def energy_from_peaks (tanker,peak) : 
+#peak(position,energy) 
+position = info_map['peaks'][peak]['line'], info_map['peaks'][peak]['column']
+energy_peak= info_map['peaks'][peak]['energy']
+
+ # Tanker to player_1
+    if tanker in info_player_1['tankers']:
+        line= info_player_1['tankers'][tanker]['position']['line']
+        column= info_player_1['tankers'][tanker]['position']['column']
+        position1= line,column
+        
+        # distance : the peak and the tanker
+        if distance(position1,position2) <= 1:
+            empty= info_player_1['tankers'][tanker]['capacity']- info_player_1['tankers'][tanker]['energy']
+            
+            #take or give energy from the peak to the tanker 
+           if empty !=0:
+               if energy_peak >= empty :
+                   info_map['peaks'][peak]['energy']-= empty
+                   info_player_1['tankers'][tanker]['energy']+= empty
+         
+               else:
+                   info_map['peaks'][peak]['energy'] = 0
+                   info_player_1['tankers'][tanker]['energy']+= energy_peak
+                
+            else:
+                raise Error 
+        
+         else:
+            raise Error 
+
+ # Tanker to player_2
+    if tanker in info_player_2['tankers']:
+        line= info_player_2['tankers'][tanker]['position']['line']
+        column= info_player_2['tankers'][tanker]['position']['column']
+        position1= line,column
+        
+        # distance : the peak and the tanker
+        if distance(position1,position2) <= 1:
+            empty= info_player_2['tankers'][tanker]['capacity']- info_player_2['tankers'][tanker]['energy']
+            
+            #take or give energy from the peak to the tanker 
+           if empty !=0:
+               if energy_peak >= empty :
+                   info_map['peaks'][peak]['energy']-= empty
+                   info_player_2['tankers'][tanker]['energy']+= empty
+         
+               else:
+                   info_map['peaks'][peak]['energy'] = 0
+                   info_player_2['tankers'][tanker]['energy']+= energy_peak
+                
+            else:
+                raise Error 
+        
+         else:
+            raise Error 
+
